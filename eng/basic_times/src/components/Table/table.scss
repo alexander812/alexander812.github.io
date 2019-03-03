@@ -1,0 +1,26 @@
+.basic-time-table{
+  td {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #000;
+    text-align: center;
+  }
+}
+
+.columns{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .col{
+    line-height: 100%;
+    border:1px solid;
+
+    &.color-green{
+    border-color: #00ff00;
+  }
+    &.color-red{
+      border-color: #ff0000;
+    }
+
+  }
+}

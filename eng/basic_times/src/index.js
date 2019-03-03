@@ -1,5 +1,15 @@
-import State from './state.js';
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+import Index from './components/index.jsx';
 
 
-const state = new State();
+
+document.addEventListener('DOMContentLoaded', () => {
+
+  ReactDOM.render(React.createElement(Index), document.querySelector('#root'));
+
+});
+
+
 
