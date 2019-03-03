@@ -8,18 +8,24 @@
 }
 
 .columns{
+  color:white;
   display: flex;
   align-items: center;
   justify-content: center;
+
+
   .col{
+
+    border-right:1px solid #000000;
+    padding: 6px;
     line-height: 100%;
-    border:1px solid;
+
 
     &.color-green{
-    border-color: #00ff00;
+    background: #045c0a;
   }
     &.color-red{
-      border-color: #ff0000;
+      background: #ff0000;
     }
 
   }
