@@ -20,9 +20,15 @@ const Columns = ({value1, value2, value3, color='green'})=>(<div className="colu
     : null}
 
 </div>);
+
+
 class Table extends React.Component {
   render() {
-    const {verb} = this.props;
+    const {verb, position} = this.props;
+
+    function setClass(pos){
+      return pos === position ? 'selected' : ''
+    }
     return <div><table className="basic-time-table">
       <tbody>
 
@@ -41,7 +47,7 @@ class Table extends React.Component {
         </td>
       </tr>
       <tr>
-        <td>
+        <td className={setClass(1)}>
 
           <Columns
             value1={['Will']}
@@ -50,7 +56,7 @@ class Table extends React.Component {
           />
 
         </td>
-        <td>
+        <td className={setClass(2)}>
 
           <Columns
             value1={firstPerson.concat(thirdPerson)}
@@ -59,7 +65,7 @@ class Table extends React.Component {
           />
 
         </td>
-        <td>
+        <td className={setClass(3)}>
           <Columns
             value1={firstPerson.concat(thirdPerson)}
             value2={['will not']}
@@ -72,7 +78,7 @@ class Table extends React.Component {
         </td>
       </tr>
       <tr>
-        <td>
+        <td className={setClass(4)}>
 
           <Columns
             value1={['Do']}
@@ -86,7 +92,7 @@ class Table extends React.Component {
             color="red"
           />
         </td>
-        <td>
+        <td className={setClass(5)}>
           <Columns
             value1={firstPerson}
             value2={[verb[0]]}
@@ -97,7 +103,7 @@ class Table extends React.Component {
             color="red"
           />
         </td>
-        <td>
+        <td className={setClass(6)}>
 
           <Columns
             value1={firstPerson}
@@ -118,7 +124,7 @@ class Table extends React.Component {
         </td>
       </tr>
       <tr>
-        <td>
+        <td className={setClass(7)}>
           <Columns
             value1={['Did']}
             value2={firstPerson.concat(thirdPerson)}
@@ -126,13 +132,13 @@ class Table extends React.Component {
           />
 
         </td>
-        <td>
+        <td className={setClass(8)}>
           <Columns
             value2={firstPerson.concat(thirdPerson)}
             value3={[verb[2]]}
           />
         </td>
-        <td>
+        <td className={setClass(9)}>
           <Columns
             value1={firstPerson.concat(thirdPerson)}
             value2={['didn\'t']}

@@ -7,7 +7,7 @@ const go = ['go', 'goes', 'went'];
 class Entry extends React.Component {
   render() {
     return <div>
-      <Table verb={go}/>
+      <Table verb={go} position={1}/>
       <Training/>
     </div>;
   }
